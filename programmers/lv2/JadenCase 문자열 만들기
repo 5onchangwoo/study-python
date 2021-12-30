@@ -5,9 +5,8 @@ def solution(s):
         if i == " " : #공백이 있을경우 다음의 문자는 첫문자이므로 Ture
             first = True
             answer += " "
-        else : 
-            if first : #만약 첫문자(first가 True)라면 대문자를 그렇지 않다면 소문자를 삽입
-                answer += i.upper()
+        else : #만약 첫문자(first가 True)라면 대문자를 그렇지 않다면 소문자를 삽입후
+            if first : answer += i.upper()
             else : answer += i.lower()
             first = False            
     return answer
