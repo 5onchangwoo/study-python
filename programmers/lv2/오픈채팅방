@@ -1,0 +1,17 @@
+def solution(record):
+    user_cache = dict()
+    user_logs = []
+    answer = []
+    for i in record :
+        tmp = i.split()
+        if tmp[0] == "Enter" :
+            user_cache[tmp[1]] = tmp[2]
+            user_logs.append(tmp[1] + "님이 들어왔습니다.")
+        elif tmp[0] == "Leave" :
+            user_logs.append(tmp[1] + "님이 나갔습니다.")
+        elif tmp[0] == "Change" :
+            user_cache[tmp[1]] = tmp[2]
+    for log in user_logs :
+        user_id = log[:log.index('님')]
+        answer.append(user_cache[user_id]+log[log.index('님'):])
+    return answer
