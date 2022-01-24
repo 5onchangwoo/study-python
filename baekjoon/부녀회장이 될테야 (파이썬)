@@ -1,4 +1,4 @@
-#https://teching.tistory.com/59?category=1020234 문제 해설
+#https://teching.tistory.com/59 문제 해설
 import sys
 def plusFloor(preFloor):
     nextFloor = [sum(preFloor[:i + 1]) for i in range(len(preFloor))]
