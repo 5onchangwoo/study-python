@@ -1,4 +1,4 @@
-#https://teching.tistory.com/62
+#https://teching.tistory.com/62 설명
 import sys
 for _ in range(int(sys.stdin.readline().rstrip())) :
     x,y = map(int,sys.stdin.readline().split())
