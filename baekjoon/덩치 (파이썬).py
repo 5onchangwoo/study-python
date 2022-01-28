@@ -8,3 +8,4 @@ for i in peoples:
     for j in peoples:
         if i[0] < j[0] and i[1] < j[1]: k += 1
     print(k+1, end = " ")
+
