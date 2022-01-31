@@ -1,4 +1,5 @@
 #https://teching.tistory.com/
+#https://www.acmicpc.net/problem/11650
 import sys
 dots = [tuple(map(int,sys.stdin.readline().split())) for _ in range(int(sys.stdin.readline().rstrip()))]
 dots.sort(key= lambda x : (x[0], x[1]))
