@@ -1,4 +1,4 @@
-# https://teching.tistory.com/manage/
+# https://teching.tistory.com/
 n = int(input())
 cache = {
     1: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
