@@ -3,12 +3,12 @@
 import sys
 n = int(sys.stdin.readline().rstrip())
 nums = list(map(int,sys.stdin.readline().split()))
-cache = []
+lis = []
 for i in range(len(nums)):
-    for c in range(len(cache)):
-        if cache[c] >= nums[i]:
-            cache[c] = nums[i]
+    for c in range(len(lis)):
+        if lis[c] >= nums[i]:
+            lis[c] = nums[i]
             break
     else:
-        cache.append(nums[i])
-print(len(cache))
+        lis.append(nums[i])
+print(len(lis))
