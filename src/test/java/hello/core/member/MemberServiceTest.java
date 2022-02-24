@@ -1,9 +1,4 @@
-package hello.core.Member;
-
-import hello.core.member.Grade;
-import hello.core.member.Member;
-import hello.core.member.MemberService;
-import hello.core.member.MemberServiceImpl;
+package hello.core.member;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +9,7 @@ public class MemberServiceTest {
     @Test //테스트를 위해서는 어노테이션을 넣어줘야함.
     void join(){
         //given 주어진환경
-        Member member = new Member(1l, "memberA", Grade.VIP);
+        Member member = new Member(1L, "memberA", Grade.VIP);
 
         //when 언제
         memberService.join(member);
