@@ -1,4 +1,4 @@
-# 문제: https://www.acmicpc.net/problem/1104
+# 문제: https://www.acmicpc.net/problem/9012
 # 해설: https://teching.tistory.com/
 import sys
 
