@@ -1,24 +1,25 @@
 import datetime
+
+
 def solution(lines):
     traffic = []
     for line in lines:
         l = line.split()
-        end = datetime.datetime.strptime(l[0]+l[1], "%Y-%m-%d%H:%M:%S.%f")
-        workTime = datetime.timedelta(seconds=float(l[2][:-1])-0.001)
-        start = end-workTime
+        end = datetime.datetime.strptime(l[0] + l[1], "%Y-%m-%d%H:%M:%S.%f")
+        workTime = datetime.timedelta(seconds=float(l[2][:-1]) - 0.001)
+        start = end - workTime
         traffic.append([start, end])
     answer = 0
     for i in traffic:
         tmp = 0
         bandStart = i[1]
-        bandEnd = i[1]+datetime.timedelta(seconds=0.999)
+        bandEnd = i[1] + datetime.timedelta(seconds=0.999)
         for work in traffic:
-            if bandEnd>=work[0]:
-                if bandStart<=work[1]:
+            if bandEnd >= work[0]:
+                if bandStart <= work[1]:
                     tmp += 1
         answer = max(tmp, answer)
     return answer
-
 
 
 lines2 = [

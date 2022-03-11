@@ -7,19 +7,16 @@ def solution(lines):
         workStart = workEnd - (float(worktime[:-1]))+0.001
         traffic.append([workStart, workEnd])
     answer = 0
-    print(traffic)
     for i in traffic:
         bandS = i[1]
         bandE = round(i[1]+0.999,3)
         cnt = 0
-        print(bandS,bandE)
         for work in traffic:
             if bandE >= work[0]:
                 if bandS <= work[1]:
                     cnt += 1
         answer = max(cnt, answer)
     return answer
-
 
 
 lines1 = [
