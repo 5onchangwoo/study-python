@@ -8,6 +8,7 @@ def solution(N, number):
             for c1 in cache[j]:
                 for c2 in cache[i-j]:
                     cache[i].add(c2+c1)
+                    cache[i].add(c2*c1)
                     if c2-c1 > 0:
                         cache[i].add(c2-c1)
                     if c1-c2 > 0:
@@ -16,7 +17,6 @@ def solution(N, number):
                         cache[i].add(c2//c1)
                     if c1//c2 != 0:
                         cache[i].add(c1//c2)
-                    cache[i].add(c2*c1)
         if number in cache[i]:
             return i
     return -1
