@@ -1,4 +1,4 @@
-#문제: https://programmers.co.kr/learn/courses/30/lessons/42586?language=python3
+#문제: https://programmers.co.kr/learn/courses/30/lessons/42586
 #블로그: https://teching.tistory.com/
 def solution(progresses, speeds):
     answer = []
