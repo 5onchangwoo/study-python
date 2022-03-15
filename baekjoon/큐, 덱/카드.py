@@ -1,4 +1,4 @@
-# 문제: https://www.acmicpc.net/problem/
+# 문제: https://www.acmicpc.net/problem/2164
 # 블로그: https://teching.tistory.com/
 from collections import deque
 

@@ -1,4 +1,4 @@
-# 문제: https://www.acmicpc.net/problem/
+# 문제: https://www.acmicpc.net/problem/11866
 # 블로그: https://teching.tistory.com/
 import sys
 from collections import deque
