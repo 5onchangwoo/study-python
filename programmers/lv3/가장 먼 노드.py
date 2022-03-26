@@ -16,7 +16,7 @@ def solution(n, edge):
         now = que.popleft()
         visited[now] = True
         for next in graph[now]:
-            if  not visited[next]:
+            if not visited[next]:
                 que.append(next)
                 if dis[next] > dis[now]+1:
                     dis[next] = dis[now]+1
