@@ -2,7 +2,6 @@
 
 def dfs(node, n,  edge, visited):
     visited[node] = True
-    print(node)
     for i in range(n):
         if edge[node][i]:
             if not visited[i]:
