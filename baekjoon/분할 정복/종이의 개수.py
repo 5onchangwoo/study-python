@@ -24,15 +24,12 @@ def paper_split(x, y, n, paper):
     if check(x, y, n, paper):
         cnt[paper[y][x]] += 1
         return
-    paper_split(x, y, n // 3, paper)
-    paper_split(x + n // 3, y, n // 3, paper)
-    paper_split(x + (n * 2 // 3), y, n // 3, paper)
-    paper_split(x, y + n // 3, n // 3, paper)
-    paper_split(x + n // 3, y + n // 3, n // 3, paper)
-    paper_split(x + (n * 2 // 3), y + n // 3, n // 3, paper)
-    paper_split(x, y + n * 2 // 3, n // 3, paper)
-    paper_split(x + n // 3, y + n * 2 // 3, n // 3, paper)
-    paper_split(x + (n * 2 // 3), y + n * 2 // 3, n // 3, paper)
+    n //= 3
+    for _ in range(3):
+        paper_split(x, y, n, paper)
+        paper_split(x + n, y, n, paper)
+        paper_split(x + n*2, y, n, paper)
+        y += n
 
 
 n = int(sys.stdin.readline().rstrip())
