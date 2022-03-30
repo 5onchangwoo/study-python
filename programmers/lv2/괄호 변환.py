@@ -28,7 +28,7 @@ def splitPoint(p):
 
 
 def solution(p):
-    if p == '' or isRight(p): return p
+    if p == '': return p
     point = splitPoint(p)
     u = p[:point]
     v = p[point:]
