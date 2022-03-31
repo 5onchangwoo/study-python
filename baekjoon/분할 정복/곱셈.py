@@ -3,7 +3,6 @@
 
 a, b, c = map(int, input().split())
 
-
 def pastPow(a, b, c):
     if b == 0:
         return 1
