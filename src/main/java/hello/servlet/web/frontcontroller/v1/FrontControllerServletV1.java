@@ -29,6 +29,7 @@ public class FrontControllerServletV1 extends HttpServlet {
         System.out.println("FrontControllerServletV1.service");
         String requestURI = request.getRequestURI();
         ControllerV1 controller = controllerMap.get(requestURI);
+        //url이 없을 경우
         if (controller==null){
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             response.setContentType("text/plain");
