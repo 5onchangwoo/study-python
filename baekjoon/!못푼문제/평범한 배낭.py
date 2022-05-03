@@ -1,5 +1,6 @@
 # 문제: https://www.acmicpc.net/problem/
 # 블로그: https://teching.tistory.com/
+# DP
 import sys
 
 n, k = map(int, sys.stdin.readline().split())
@@ -22,3 +23,4 @@ print(dp[-1][-1])
 
 
 
+val 
