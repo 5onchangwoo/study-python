@@ -20,7 +20,3 @@ for line in range(n):
         for i in range(k+1):
             dp[line+1][i] = dp[line][i]
 print(dp[-1][-1])
-
-
-
-val 
