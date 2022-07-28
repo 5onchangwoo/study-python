@@ -32,6 +32,7 @@
     + `list="name"`: 데이터 자동완성 리스트 제공(강요X), datalist의 이름을 넣으면 된다.
       + `datalist id="name"`: datalist 지정
         + `<option value="">`: datalist 옵션
+    + 전송을 하게되면 name 값이 key 값이 되고 value값이 value값으로 전송이 된다.
 
   
 + `radio`
