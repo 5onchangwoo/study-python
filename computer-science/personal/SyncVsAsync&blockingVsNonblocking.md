@@ -27,8 +27,7 @@
 
 ## 조합
 이제 각자의 경우에 대해서 알게 되었으니 두가지를 섞어보자.
-### 동기 + 블로킹
-![blocking](../../asset/img/Blocking.png)
+![blocking](https://github.com/5onchangwoo/study/blob/main/asset/img/%08SyncVsAsync%26BlockingVsNonBlocking1.png)
 해당 말을 보다보면 이러한 사진을 많이 보게 되었을 것이다. 나 또한 해당 사진이 동기,비동기 x 블로킹, 논블로킹을 가장 한눈에 알 수 있도록 잘 그린 표라고 생각한다.
 ### Sync + Blocking
 가장 먼저 동기 + 블록킹의 경우를 알아보자.  
