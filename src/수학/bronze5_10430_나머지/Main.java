@@ -1,4 +1,4 @@
-package 수학.나머지_10430;
+package 수학.bronze5_10430_나머지;
 
 import java.io.BufferedReader;
 import java.io.IOException;
