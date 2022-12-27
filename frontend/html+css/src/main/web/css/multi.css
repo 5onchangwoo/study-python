@@ -1,0 +1,6 @@
+.multi-col-box{
+  column-count: 3;
+  column-gap: 10px;
+  column-rule: 10px solid red;
+  column-rule-style:;
+}

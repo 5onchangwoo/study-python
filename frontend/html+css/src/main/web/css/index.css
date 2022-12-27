@@ -1,0 +1,318 @@
+@import url(style.css);
+
+
+.header-cafe-bg-box{
+    /*height: 530px; (header + cafe 높이 총합)*/
+
+    background: url("../images/2.jpg") no-repeat -245px/cover #D4BFA0;
+    background-position: center;
+}
+
+.header{
+  height: 50px;
+  width: 100%;
+  background-color: #0003;
+
+  /* layout */
+  position:sticky;
+  top: 0px;
+
+  /* item layout */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  box-sizing: border-box;
+
+}
+
+.cafe{
+  height: 480px;
+
+  /* item layout */
+  display: flex;
+  flex-direction: column;
+}
+  .cafe-title{
+    margin-top: 23px;
+    margin-left: -14px;
+  }
+
+  .cafe-menu-all{
+    margin-top: auto;
+    align-self: flex-end;
+    margin-right: 5px;
+  }
+
+  .rland-location{
+    margin-top: 19px;
+  }
+
+.rland{
+    margin-top: 30px;
+    height: 530px;
+
+
+}
+
+.spot{
+    height: 350px;
+    background-image: url("../images/b23.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.visited-review{
+
+}
+
+.blog{
+
+}
+
+.location{
+
+}
+
+.business-hour{
+
+}
+
+.footer{
+
+}
+
+/* ===== content block ==================================================== */
+.header-title{
+  font-family: 'Segoe UI', '굴림', '돋음', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: #fff;
+  /*font-style: oblique;*/
+  display: inline-block;
+}
+.cafe-title{
+  /* font style */
+  font-family: 'Nanum pen Script', cursive;
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+
+  /* box style */
+  width: 248px;
+  height 45px;
+  background-color: rgba(0,0,0,0.29);
+  border-radius: 0 20px 20px 0;
+}
+
+.top-menu{
+  padding: 31px 0;
+  background-color: #fff6;
+
+}
+
+.top-menu>ul{
+  /*width: 1000px;*/
+  margin: 0;
+  padding: 0;
+  /*overflow: hidden;*/
+
+  /* item layout */
+  display: flex;
+
+}
+
+.top-menu li{
+  /*float: left;*/
+  list-style-type: none;
+  width: 100px;
+  height: 100px;
+  margin-left:20px;
+  overflow:hidden;
+  flex-shrink: 0;
+
+}
+
+/*.top-menu li.first{ --> :first-child로 대체 가능.
+  margin-left:24px;
+}*/
+.top-menu li:first-child{ /*자식중 첫번쨰가 아닌 첫번째 요소*/
+  margin-left:24px;
+}
+
+
+.top-menu li>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.top-menu li>a{
+  width:100%;
+  height:100%;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #0006;
+  color: #fff;
+  transition: 300ms;
+}
+
+
+.top-menu li:hover>a{
+  /*margin-top: -50px;  배경이 사라지는 문제점이 있음. 배경은 형을 이기지 못함.*/
+  position: relative;
+
+  /*translate:;*/
+
+  transform: translateY(-100%);
+}
+
+/* ---- rland item ------------------------------------------------ */
+
+.rland>article{
+  cursor: pointer;
+  display: grid;
+  grid-template:
+    "img title"   35px
+    "img content" 65px
+    / 100px 1fr;
+  grid-column-gap: 20px;
+}
+
+
+.rland>article{
+  display: grid;
+  grid-template:
+    "img title"   35px
+    "img content" 65px
+    / 100px 1fr;
+  grid-column-gap: 20px;
+
+  column-gap: 20px;
+  padding: 10px 24px;
+
+  transition: 1s;
+}
+
+.rland>article:hover{
+  background-color: yellowgreen;
+}
+
+
+.rland>article:nth-child(2n+1){
+  display: grid;
+  grid-template:
+    "title img"   35px
+    "content img" 65px
+    / 1fr 100px;
+  grid-column-gap: 20px;
+}
+
+
+  .rland>article>h1{
+      /* text */
+      font-family: 'Nanum Pen Script', cursive;
+      font-weight: normal;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+
+      /* layout */
+      grid-area: title;
+      align-self: center;
+
+  }
+
+  .rland>article>div{
+    grid-area: img;
+    overflow: hidden;
+  }
+    .rland>article>div>img{
+      /* layout */
+      border-radius: 20px 0 0 20px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 600ms;
+    }
+    .rland>article:nth-child(2n+1)>div>img{
+      /* layout */
+      border-radius: 0px 20px 20px 0px;
+    }
+
+    .rland>article:hover>div>img{
+    border-radius: 0 0 0 0;
+    }
+
+  .rland>article>p{
+    /* text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+
+
+    grid-area: content;
+
+  }
+
+
+
+/* ===== btn content ==================================================== */
+
+.btn-cafe-menu-all{
+  /* font style */
+  font-family: 'Segoe UI', Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 25px;
+
+  /* box style */
+  display: inline-block;
+  /*width: 83px;
+  height: 25px;*/
+  padding: 3px 14px;
+  background-color: #D68814;
+  border-radius: 10px 0 10px 0
+}
+
+.btn-rland-location{
+/* text style */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-align: left;
+  line-height: 40px;
+
+/* content box style */
+  display: inline-block;
+  background-color: rgba(110, 152, 9, 0.65);
+  width: 173px;
+  height: 40px;
+  padding-left: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='20' viewBox='0 0 14 20'%3E%3Cpath id='Icon_material-place' date-name='Icon material-place' d='M14.5, 3a7, 7, 0, 0, 0-7, 7c0, 5.25, 7, 13, 7, 13s7-7.75, 7-13A7, 7, 0, 0, 0, 14.5, 3Zm0, 9.5A2.5, 2.5, 0, 1, 1, 17, 10, 2.5, 2.5, 0, 0, 1, 14.5, 12.5Z' transform='translate(-7.5 -3)' fill='%23fff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  box-sizing: border-box;
+}
+
+.img-btn-menu{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='17' viewBox='0 0 24 17'%3E%3Cg id='Icon_feather-menu' data-name='Icon feather-menu' transform='translate(1.5 1.5)'%3E%3Cpath id='패스_1' data-name='패스 1' d='M4.5,18h21' transform='translate(-4.5 -11)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M4.5,9h21' transform='translate(-4.5 -9)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M4.5,27h21' transform='translate(-4.5 -13)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 24px;
+  height: 17px;
+  /* 텍스트 숨기기 */
+  overflow: hidden;
+  text-indent: -999px;
+}
