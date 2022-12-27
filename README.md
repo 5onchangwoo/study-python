@@ -8,4 +8,4 @@
 
 ---
 ## Algorithm (알고리즘 문제)
-- [코드 보러가기](https://github.com/5onchangwoo/study/tree/main/algorithm-test)
+- [코드 보러가기](https://github.com/5onchangwoo/algorithm-test)
