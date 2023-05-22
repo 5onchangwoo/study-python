@@ -3,7 +3,7 @@
 
 ## 코드 설명
 - 코드 UML  
-  ![uml](./PizzaFactory.png)
+  ![uml](./PizzaCreator.png)
 - Pizza 인터페이스를 두고 여러 상품 생성
 - Factory에서 피자 총량을 관리할 수 있음.
 - 피자를 주문하는 사람은 원하는 PizzaFactory를 호출하기만 하면 됨 -> 캡슐화 (정보 은닉)
