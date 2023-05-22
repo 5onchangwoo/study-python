@@ -1,10 +1,10 @@
 package com.example.dessignpattern.creational.factorymethod;
 
-public abstract class PizzaFactory {
+public abstract class PizzaCreator {
     int count;
     abstract Pizza createPizza();
 
-    public PizzaFactory(int count){
+    public PizzaCreator(int count){
         this.count = count;
     }
 }

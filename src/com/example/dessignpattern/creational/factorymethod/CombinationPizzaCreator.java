@@ -1,15 +1,15 @@
 package com.example.dessignpattern.creational.factorymethod;
 
-public class BulgogiPizzaFactory extends PizzaFactory{
-    public BulgogiPizzaFactory(int count) {
+public class CombinationPizzaCreator extends PizzaCreator {
+    public CombinationPizzaCreator(int count) {
         super(count);
     }
 
     @Override
     Pizza createPizza() {
-        if(count > 0){
+        if(count > 0) {
             count--;
-            return new BulgogiPizza();
+            return new CombinationPizza();
         }
         return new NullPizza();
     }

@@ -3,7 +3,7 @@ package com.example.dessignpattern.creational.factorymethod;
 public class Main {
     public static void main(String[] args) {
         // 불고기 피자 생성
-        PizzaFactory factory1 = new BulgogiPizzaFactory(2);
+        PizzaCreator factory1 = new BulgogiPizzaCreator(2);
         Pizza bulgogiPizza1 = factory1.createPizza();
         bulgogiPizza1.eat();
         Pizza bulgogiPizza2 = factory1.createPizza();
@@ -13,7 +13,7 @@ public class Main {
         bulgogiPizza3.eat();
 
         // 콤비네이션 피자 생성
-        PizzaFactory factory2 = new CombinationPizzaFactory(1);
+        PizzaCreator factory2 = new CombinationPizzaCreator(1);
         Pizza combinationPizza1 = factory2.createPizza();
         combinationPizza1.eat();
             // 두개부턴 못먹어요 ㅜㅜ
