@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mybatistest.mapper.TestDAO">
+    <select id="getListTest"
+            parameterType="String"
+            resultType="com.example.mybatistest.model.Test">
+        SELECT
+               NAME
+          FROM test_table
+        <if test='name != null or name = ""'>
+        WHERE name Like CONCAT('%',#{name},'%')
+        </if>
+    </select>
+    <insert id="insertTest"
+            parameterType="com.example.mybatistest.model.Test"
+            useGeneratedKeys="true"
+            keyColumn="id"
+    >
+        INSERT INTO test_table (NAME)
+        values (#{name})
+    </insert>
+    <delete
+            id="deleteTest"
+            parameterType="int"
+    >
+        DELETE FROM test_table
+         WHERE id = #{id}
+    </delete>
+    <update id="updateTest"
+            parameterType="com.example.mybatistest.model.UpdateTestDTO"
+    >
+        UPDATE test_table
+           SET name = #{name}
+         WHERE id = #{id}
+    </update>
+</mapper>
