@@ -12,5 +12,4 @@ public class MybatisTestApplication {
         SpringApplication.run(MybatisTestApplication.class, args);
     }
 
-
 }

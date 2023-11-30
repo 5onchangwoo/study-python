@@ -10,8 +10,11 @@ import java.util.List;
 public interface TestDAO {
     List<Test> getListTest(String name);
 
+    boolean isExistName(String name);
+
     int insertTest(Test test);
 
     boolean deleteTest(int id);
     boolean updateTest(UpdateTestDTO testDTO);
+
 }

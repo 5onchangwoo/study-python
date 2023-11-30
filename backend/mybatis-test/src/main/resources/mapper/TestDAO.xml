@@ -5,13 +5,21 @@
 <mapper namespace="com.example.mybatistest.mapper.TestDAO">
     <select id="getListTest"
             parameterType="String"
-            resultType="com.example.mybatistest.model.Test">
+            resultType="com.example.mybatistest.model.Test"
+    >
         SELECT
                NAME
           FROM test_table
         <if test='name != null or name = ""'>
         WHERE name Like CONCAT('%',#{name},'%')
         </if>
+    </select>
+
+    <select id="isExistName"
+            parameterType="String"
+            resultType="boolean"
+    >
+        SELECT EXISTS (SELECT 1 FROM test_table WHERE name = #{name} LIMIT 1)
     </select>
     <insert id="insertTest"
             parameterType="com.example.mybatistest.model.Test"
