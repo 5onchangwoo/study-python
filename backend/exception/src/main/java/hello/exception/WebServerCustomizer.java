@@ -1,7 +1,5 @@
 package hello.exception;
 
-import jakarta.servlet.http.HttpServletRequest;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.server.ConfigurableWebServerFactory;
 import org.springframework.boot.web.server.ErrorPage;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
@@ -19,7 +17,6 @@ public class WebServerCustomizer implements WebServerFactoryCustomizer<Configura
         ErrorPage errorPageEx = new ErrorPage(RuntimeException.class, "/error-page/500");
         factory.addErrorPages(errorPage404, errorPage500, errorPageEx);
     }
-
 
 }
 
