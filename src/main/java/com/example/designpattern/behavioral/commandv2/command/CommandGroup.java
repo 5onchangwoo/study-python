@@ -1,4 +1,4 @@
-package com.example.designpattern.behavioral.commandv2;
+package com.example.designpattern.behavioral.commandv2.command;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +8,13 @@ public class CommandGroup implements Command {
 
     public void add(Command command) {
         commands.add(command);
+    }
+
+    public Command pop(){
+        int last = commands.size() - 1;
+        Command popCommand = commands.get(last);
+        commands.remove(last);
+        return popCommand;
     }
 
     @Override

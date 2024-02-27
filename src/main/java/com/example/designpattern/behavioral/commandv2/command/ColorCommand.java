@@ -1,4 +1,4 @@
-package com.example.designpattern.behavioral.commandv2;
+package com.example.designpattern.behavioral.commandv2.command;
 
 public class ColorCommand implements Command {
     public enum Color {
