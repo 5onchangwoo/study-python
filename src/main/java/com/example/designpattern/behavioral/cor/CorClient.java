@@ -1,9 +1,8 @@
 package com.example.designpattern.behavioral.cor;
 
-import com.example.designpattern.behavioral.cor.middleware.Middleware;
-import com.example.designpattern.behavioral.cor.middleware.RoleCheckMiddleware;
-import com.example.designpattern.behavioral.cor.middleware.ThrottlingMiddleware;
-import com.example.designpattern.behavioral.cor.middleware.UserExistsMiddleware;
+import com.example.designpattern.behavioral.cor.handler.Handler;
+import com.example.designpattern.behavioral.cor.handler.RoleCheckHandler;
+import com.example.designpattern.behavioral.cor.handler.UserExistsHandler;
 import com.example.designpattern.behavioral.cor.server.Server;
 
 import java.io.BufferedReader;
@@ -19,13 +18,12 @@ public class CorClient {
         server.register("admin@example.com", "admin_pass");
         server.register("user@example.com", "user_pass");
 
-        Middleware middleware = Middleware.link(
-                new ThrottlingMiddleware(2),
-                new UserExistsMiddleware(server),
-                new RoleCheckMiddleware()
+        Handler handler = Handler.link(
+                new UserExistsHandler(server),
+                new RoleCheckHandler()
         );
 
-        server.setMiddleware(middleware);
+        server.setHandler(handler);
     }
 
     public static void main(String[] args) throws IOException {

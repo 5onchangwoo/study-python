@@ -1,11 +1,11 @@
-package com.example.designpattern.behavioral.cor.middleware;
+package com.example.designpattern.behavioral.cor.handler;
 
-public abstract class Middleware {
-    private Middleware next;
+public abstract class Handler {
+    private Handler next;
 
-    public static Middleware link(Middleware first, Middleware... chain) {
-        Middleware head = first;
-        for (Middleware nextInChain : chain) {
+    public static Handler link(Handler first, Handler... chain) {
+        Handler head = first;
+        for (Handler nextInChain : chain) {
             head.next = nextInChain;
             head = nextInChain;
         }

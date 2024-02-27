@@ -1,11 +1,11 @@
-package com.example.designpattern.behavioral.cor.middleware;
+package com.example.designpattern.behavioral.cor.handler;
 
 import com.example.designpattern.behavioral.cor.server.Server;
 
-public class UserExistsMiddleware extends Middleware {
+public class UserExistsHandler extends Handler {
     private Server server;
 
-    public UserExistsMiddleware(Server server) {
+    public UserExistsHandler(Server server) {
         this.server = server;
     }
 
@@ -19,6 +19,8 @@ public class UserExistsMiddleware extends Middleware {
             System.out.println("비밀번호가 틀렸습니다.");
             return false;
         }
+
+        System.out.println("인증 성공");
         return checkNext(email, password);
     }
 }

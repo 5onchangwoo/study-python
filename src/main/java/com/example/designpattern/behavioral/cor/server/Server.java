@@ -1,20 +1,18 @@
 package com.example.designpattern.behavioral.cor.server;
 
-import com.example.designpattern.behavioral.cor.middleware.Middleware;
+import com.example.designpattern.behavioral.cor.handler.Handler;
+import lombok.Setter;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Server {
     private Map<String, String> users = new HashMap<>();
-    private Middleware middleware;
-
-    public void setMiddleware(Middleware middleware) {
-        this.middleware = middleware;
-    }
+    @Setter
+    private Handler handler;
 
     public boolean logIn(String email, String password) {
-        if (middleware.check(email, password)) {
+        if (handler.check(email, password)) {
             System.out.println("인증 성공");
             return true;
         }
@@ -32,4 +30,5 @@ public class Server {
     public boolean isValidPassword(String email, String password) {
         return users.get(email).equals(password);
     }
+    
 }

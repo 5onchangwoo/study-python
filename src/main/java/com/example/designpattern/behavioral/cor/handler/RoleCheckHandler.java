@@ -1,6 +1,6 @@
-package com.example.designpattern.behavioral.cor.middleware;
+package com.example.designpattern.behavioral.cor.handler;
 
-public class RoleCheckMiddleware extends Middleware {
+public class RoleCheckHandler extends Handler {
     @Override
     public boolean check(String email, String password) {
         if (email.equals("admin@example.com")) {
