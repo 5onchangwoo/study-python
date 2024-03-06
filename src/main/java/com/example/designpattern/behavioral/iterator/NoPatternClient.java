@@ -19,6 +19,7 @@ public class NoPatternClient {
         for (Book book : bookshelf) {
             System.out.println(book);
         }
+
         System.out.println("============================================");
 
         bookshelf.sort(Comparator.comparing(Book::getDate));
