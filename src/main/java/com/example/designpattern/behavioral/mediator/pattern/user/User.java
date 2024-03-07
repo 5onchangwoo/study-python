@@ -3,7 +3,7 @@ package com.example.designpattern.behavioral.mediator.pattern.user;
 import com.example.designpattern.behavioral.mediator.pattern.mediator.Mediator;
 import lombok.Getter;
 
-public abstract class User {
+public class User {
     @Getter
     private String name;
 

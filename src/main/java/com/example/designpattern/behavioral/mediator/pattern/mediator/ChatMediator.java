@@ -5,10 +5,10 @@ import com.example.designpattern.behavioral.mediator.pattern.user.User;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConcreteMediator implements Mediator {
+public class ChatMediator implements Mediator {
     private final List<User> users;
 
-    public ConcreteMediator() {
+    public ChatMediator() {
         this.users = new ArrayList<>();
     }
 
@@ -18,7 +18,6 @@ public class ConcreteMediator implements Mediator {
             if(user == from) continue;
             user.receiveMessage(from, msg);
         }
-
     }
 
     @Override
