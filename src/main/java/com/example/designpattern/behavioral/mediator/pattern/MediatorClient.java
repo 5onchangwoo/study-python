@@ -24,7 +24,6 @@ public class MediatorClient {
         mediator.addUser(user1);
         mediator.addUser(user2);
         mediator.addUser(user3);
-
         System.out.println("========= 유저1 메시지 =========");
         user1.sendMessageAll("안녕하세요!");
 
