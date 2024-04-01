@@ -7,11 +7,11 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 public class CharacterStatus {
-    private int hp;
-    private int mp;
-    private int atk;
-    private int def;
-    private int sp;
+    private final int hp;
+    private final int mp;
+    private final int atk;
+    private final int def;
+    private final int sp;
 
     public CharacterStatus() {
         this.hp = 1000;
