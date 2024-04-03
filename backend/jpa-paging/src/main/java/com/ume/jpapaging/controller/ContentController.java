@@ -4,7 +4,6 @@ import com.ume.jpapaging.model.dto.ContentDTO;
 import com.ume.jpapaging.model.dto.ResponseDTO;
 import com.ume.jpapaging.model.service.ContentService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -12,6 +11,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("")
@@ -22,7 +24,7 @@ public class ContentController {
 
     @GetMapping("contents")
     public ResponseEntity<ResponseDTO> getContentsList(@PageableDefault(page = 0, size = 5, sort = "title", direction = Sort.Direction.ASC) Pageable pageable) {
-        Page<ContentDTO> contentList = contentService.getContentList(pageable);
+        List<ContentDTO> contentList = contentService.getContentList(pageable);
         ResponseDTO res = ResponseDTO.builder()
                 .result("성공적으로 조회했습니다.")
                 .data(contentList)
