@@ -1,3 +1,26 @@
 <html>
-<body>index html</body>
+<head>
+  <meta charset="UTF-8">
+  <title>hello</title>
+  <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+  <script type="text/babel" src="Table.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+  function App(props) {
+    return (
+        <div>hello world
+          <Table/>
+        </div>
+    )
+  }
+  ReactDOM.render(<App/>, document.getElementById('root'));
+</script>
+</body>
 </html>
