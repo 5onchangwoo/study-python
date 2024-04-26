@@ -3,7 +3,7 @@
 
 ## 1. algorithm-test
 알고리즘 공부/풀었던 내용을 정리한 공간입니다.
-현재 알고리즘 문제풀이 내역은 다른 레파지토리(![algorithm-test](https://github.com/codeyaki/algorithm-test))에 저장중입니다.
+현재 알고리즘 문제풀이 내역은 다른 레파지토리([algorithm-test](https://github.com/codeyaki/algorithm-test))에 저장중입니다.
 
 ## 2. backend
 
