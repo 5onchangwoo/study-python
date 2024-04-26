@@ -1,11 +1,15 @@
 # study
-개인적으로 공부한 것들을 정리하는 공간입니다.
+공부하면서 작성했던 코드들을 관리하기 위해서 만든 레파지토리입니다.
 
-## Computer science (컴퓨터 사이언스)
-### 1. 개인적 궁금증
-- [동기, 비동기, 블로킹, 논블로킹의 차이](https://github.com/5onchangwoo/study/blob/main/computer-science/personal/SyncVsAsync%26blockingVsNonblocking.md)
+## 1. algorithm-test
+알고리즘 공부/풀었던 내용을 정리한 공간입니다.
+현재 알고리즘 문제풀이 내역은 다른 레파지토리(![algorithm-test](https://github.com/codeyaki/algorithm-test))에 저장중입니다.
 
+## 2. backend
 
----
-## Algorithm (알고리즘 문제)
-- [코드 보러가기](https://github.com/5onchangwoo/algorithm-test)
+## 3. computer-science
+
+## 4. frontend
+
+## 5. inflearn
+인프런 강의를 들으면서 작성했던 코드들입니다.
