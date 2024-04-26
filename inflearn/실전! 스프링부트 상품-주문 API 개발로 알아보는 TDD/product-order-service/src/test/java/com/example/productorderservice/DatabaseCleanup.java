@@ -16,18 +16,20 @@ import java.util.stream.Collectors;
 
 @Component
 public class DatabaseCleanup implements InitializingBean {
-
     @PersistenceContext
-    private EntityManager em;
+    private EntityManager entityManager;
 
     private List<String> tableNames;
 
     @Override
-    public void afterPropertiesSet(){
-        final Set<EntityType<?>> entities = em.getMetamodel().getEntities();
+    public void afterPropertiesSet() {
+        final Set<EntityType<?>> entities = entityManager.getMetamodel().getEntities();
         tableNames = entities.stream()
                 .filter(e -> isEntity(e) && hasTableAnnotation(e))
-                .map(e -> e.getJavaType().getAnnotation(Table.class).name())
+                .map(e -> {
+                    String tableName = e.getJavaType().getAnnotation(Table.class).name();
+                    return tableName.isBlank() ? CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, e.getName()) : tableName;
+                })
                 .collect(Collectors.toList());
 
         final List<String> entityNames = entities.stream()
@@ -48,14 +50,16 @@ public class DatabaseCleanup implements InitializingBean {
 
     @Transactional
     public void execute() {
-        em.flush();
-        em.createNativeQuery("SET REFERENTIAL_INTEGRITY FALSE").executeUpdate();
+        entityManager.flush();
+        entityManager.createNativeQuery("SET REFERENTIAL_INTEGRITY FALSE").executeUpdate();
 
-        for (String tableName : tableNames) {
-            em.createNativeQuery("TRUNCATE TABLE " + tableName).executeUpdate();
-            em.createNativeQuery("ALTER TABLE" + tableName + " ALTER COLUMN ID RESTART WITH 1").executeUpdate();
+        for (final String tableName : tableNames) {
+            entityManager.createNativeQuery("TRUNCATE TABLE " + tableName).executeUpdate();
+            entityManager.createNativeQuery("ALTER TABLE " + tableName + " ALTER COLUMN ID RESTART WITH 1").executeUpdate();
         }
 
-        em.createNativeQuery("SET REFERENTIAL_INTEGRITY TRUE").executeUpdate();
+        entityManager.createNativeQuery("SET REFERENTIAL_INTEGRITY TRUE").executeUpdate();
     }
+
 }
+
