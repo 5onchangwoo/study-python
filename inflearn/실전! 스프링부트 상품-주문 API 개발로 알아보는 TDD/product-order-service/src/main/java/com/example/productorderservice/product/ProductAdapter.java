@@ -1,9 +1,10 @@
 package com.example.productorderservice.product;
 
+import org.springframework.stereotype.Component;
+
+@Component
 class ProductAdapter implements ProductPort {
-
-
-    private final ProductRepository productRepository;
+    private ProductRepository productRepository;
 
     ProductAdapter(ProductRepository productRepository) {
         this.productRepository = productRepository;
@@ -12,5 +13,6 @@ class ProductAdapter implements ProductPort {
     @Override
     public void save(Product product) {
         productRepository.save(product);
+
     }
 }

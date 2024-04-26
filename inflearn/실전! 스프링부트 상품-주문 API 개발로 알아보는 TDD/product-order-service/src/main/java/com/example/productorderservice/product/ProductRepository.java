@@ -1,14 +1,12 @@
 package com.example.productorderservice.product;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
-class ProductRepository {
-    private Map<Long, Product> persistence = new HashMap<>();
-    private Long sequence = 0L;
+@Component
+interface ProductRepository extends JpaRepository<Product, Long> {
 
-    public void save(final Product product) {
-        product.assignId(++sequence);
-        persistence.put(product.getId(), product);
-    }
 }
