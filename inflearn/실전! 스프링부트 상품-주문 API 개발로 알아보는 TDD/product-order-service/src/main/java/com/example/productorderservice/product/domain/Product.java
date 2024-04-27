@@ -1,4 +1,4 @@
-package com.example.productorderservice.product;
+package com.example.productorderservice.product.domain;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Table(name = "products")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-class Product {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,5 +39,9 @@ class Product {
         this.name = name;
         this.price = price;
         this.discountPolicy = discountPolicy;
+    }
+
+    public int getDiscountPrice() {
+        return discountPolicy.applyDiscount(price);
     }
 }

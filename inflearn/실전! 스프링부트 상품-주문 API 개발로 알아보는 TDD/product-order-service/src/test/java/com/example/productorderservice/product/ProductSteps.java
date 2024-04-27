@@ -1,5 +1,8 @@
 package com.example.productorderservice.product;
 
+import com.example.productorderservice.product.application.service.AddProductRequest;
+import com.example.productorderservice.product.domain.DiscountPolicy;
+import com.example.productorderservice.product.application.service.UpdateProductRequest;
 import io.restassured.RestAssured;
 import io.restassured.response.ExtractableResponse;
 import io.restassured.response.Response;
@@ -30,5 +33,9 @@ public class ProductSteps {
                 .get("/products/{productId}", productId)
                 .then().log().all()
                 .extract();
+    }
+
+    public static UpdateProductRequest 상품수정요청_생성() {
+        return new UpdateProductRequest("상품 수정", 2000, DiscountPolicy.NONE);
     }
 }
