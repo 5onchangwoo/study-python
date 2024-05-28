@@ -2,6 +2,6 @@ package hello.container;
 
 import jakarta.servlet.ServletContext;
 
-public interface AppInit2 {
+public interface TestInit {
     void onStartup(ServletContext servletContext);
 }
