@@ -1,6 +1,5 @@
 package hello.boot;
 
-import hello.spring.HelloConfig;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.connector.Connector;

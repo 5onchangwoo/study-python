@@ -7,6 +7,6 @@ import hello.boot.MySpringBootApplication;
 public class MySpringBootMain {
     public static void main(String[] args) {
         System.out.println("MySpringBootMain.main");
-        MySpringApplication.run(MySpringApplication.class, args);
+        MySpringApplication.run(MySpringBootMain.class, args);
     }
 }
