@@ -5,7 +5,7 @@ import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 
-@Entity
+//@Entity
 @AttributeOverrides({
         @AttributeOverride(name = "id", column = @Column(name = "MEMBER_ID")),
         @AttributeOverride(name = "name", column = @Column(name = "MEMBER_NAME"))

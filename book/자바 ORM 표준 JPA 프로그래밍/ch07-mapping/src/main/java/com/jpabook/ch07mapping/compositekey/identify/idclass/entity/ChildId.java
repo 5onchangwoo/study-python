@@ -1,4 +1,4 @@
-package com.jpabook.ch07mapping.compositekey.identifyrelationship.idclass.entity;
+package com.jpabook.ch07mapping.compositekey.identify.idclass.entity;
 
 import java.io.Serializable;
 import java.util.Objects;

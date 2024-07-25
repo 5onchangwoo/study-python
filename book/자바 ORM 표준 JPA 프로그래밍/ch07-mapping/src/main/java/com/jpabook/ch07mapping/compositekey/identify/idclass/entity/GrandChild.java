@@ -1,14 +1,12 @@
-package com.jpabook.ch07mapping.compositekey.identifyrelationship.embeddedid.entity;
+package com.jpabook.ch07mapping.compositekey.identify.idclass.entity;
 
 import jakarta.persistence.*;
 
-@Entity
+//@Entity
+@IdClass(GrandChildId.class)
 public class GrandChild {
 
-    @EmbeddedId
-    private GrandChildId id;
-
-    @MapsId("childId")
+    @Id
     @ManyToOne
     @JoinColumns({
             @JoinColumn(name = "PARENT_ID"),
@@ -16,22 +14,25 @@ public class GrandChild {
     })
     private Child child;
 
+    @Id @Column(name = "GRANDCHILD_ID")
+    private String id;
+
     private String name;
-
-    public GrandChildId getId() {
-        return id;
-    }
-
-    public void setId(GrandChildId id) {
-        this.id = id;
-    }
 
     public Child getChild() {
         return child;
-    }
+}
 
     public void setChild(Child child) {
         this.child = child;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {

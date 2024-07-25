@@ -2,7 +2,7 @@ package com.jpabook.ch07mapping.compositekey.idclass.entity;
 
 import jakarta.persistence.*;
 
-@Entity
+//@Entity
 public class Child {
 
     @Id

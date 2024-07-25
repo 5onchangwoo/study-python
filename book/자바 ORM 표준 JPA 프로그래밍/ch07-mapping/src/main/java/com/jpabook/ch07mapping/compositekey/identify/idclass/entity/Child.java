@@ -1,8 +1,8 @@
-package com.jpabook.ch07mapping.compositekey.identifyrelationship.idclass.entity;
+package com.jpabook.ch07mapping.compositekey.identify.idclass.entity;
 
 import jakarta.persistence.*;
 
-@Entity
+//@Entity
 @IdClass(ChildId.class)
 public class Child {
 

@@ -2,7 +2,7 @@ package com.jpabook.ch07mapping.superclass.join;
 
 import jakarta.persistence.*;
 
-@Entity
+//@Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "DTYPE")
 public abstract class Item {

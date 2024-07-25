@@ -1,30 +1,23 @@
-package com.jpabook.ch07mapping.compositekey.identifyrelationship.embeddedid.entity;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
+package com.jpabook.ch07mapping.compositekey.identify.idclass.entity;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-@Embeddable
 public class GrandChildId implements Serializable {
 
-    public ChildId childId;
-
-    @Column(name = "GRANDCHILD_ID")
+    private ChildId child;
     private String id;
 
-    // equals, hashCode...
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GrandChildId that = (GrandChildId) o;
-        return Objects.equals(childId, that.childId) && Objects.equals(id, that.id);
+        return Objects.equals(child, that.child) && Objects.equals(id, that.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(childId, id);
+        return Objects.hash(child, id);
     }
 }

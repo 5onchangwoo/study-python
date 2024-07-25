@@ -1,10 +1,10 @@
-package com.jpabook.ch07mapping.compositekey.identifyrelationship.idclass.entity;
+package com.jpabook.ch07mapping.compositekey.identify.idclass.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-@Entity
+//@Entity
 public class Parent {
 
     @Id @Column(name = "PARENT_ID")

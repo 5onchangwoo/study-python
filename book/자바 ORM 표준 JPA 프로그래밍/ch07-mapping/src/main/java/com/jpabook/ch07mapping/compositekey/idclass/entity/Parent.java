@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
 
-@Entity
+//@Entity
 @IdClass(ParentId.class)
 public class Parent {
 

@@ -1,9 +1,9 @@
-package com.jpabook.ch07mapping.compositekey.identifyrelationship.embeddedid.entity;
+package com.jpabook.ch07mapping.compositekey.identify.embeddedid.entity;
 
 
 import jakarta.persistence.*;
 
-@Entity
+//@Entity
 public class Child {
     @EmbeddedId
     private ChildId id;
