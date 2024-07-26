@@ -1,4 +1,4 @@
-package com.jpabook.ch07mapping.onetoone;
+ package com.jpabook.ch07mapping.onetoone;
 
 import com.jpabook.ch07mapping.onetoone.entity.Board;
 import com.jpabook.ch07mapping.onetoone.entity.BoardDetail;

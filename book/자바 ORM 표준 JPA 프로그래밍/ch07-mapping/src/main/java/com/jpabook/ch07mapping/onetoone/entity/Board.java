@@ -2,7 +2,7 @@ package com.jpabook.ch07mapping.onetoone.entity;
 
 import jakarta.persistence.*;
 
-@Entity
+//@Entity
 public class Board {
 
     @Id @GeneratedValue

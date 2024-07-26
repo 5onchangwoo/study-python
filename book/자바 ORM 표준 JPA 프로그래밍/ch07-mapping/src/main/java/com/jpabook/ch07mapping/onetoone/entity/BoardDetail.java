@@ -2,7 +2,7 @@ package com.jpabook.ch07mapping.onetoone.entity;
 
 import jakarta.persistence.*;
 
-@Entity
+//@Entity
 public class BoardDetail {
 
     @Id
@@ -22,7 +22,7 @@ public class BoardDetail {
     public void setBoardId(Long boardId) {
         this.boardId = boardId;
     }
-
+ 
     public Board getBoard() {
         return board;
     }
