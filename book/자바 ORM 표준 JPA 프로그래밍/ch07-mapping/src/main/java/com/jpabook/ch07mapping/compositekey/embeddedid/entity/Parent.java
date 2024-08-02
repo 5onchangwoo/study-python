@@ -3,7 +3,7 @@ package com.jpabook.ch07mapping.compositekey.embeddedid.entity;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 
-////@Entity
+//@Entity
 public class Parent {
 
     @EmbeddedId

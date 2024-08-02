@@ -1,4 +1,4 @@
-package com.jpabook.ch07mapping.jointable.onetomany;
+package com.jpabook.ch07mapping.jointable.manytomany;
 
 import jakarta.persistence.*;
 
@@ -7,13 +7,14 @@ import java.util.List;
 
 //@Entity
 public class Parent {
+
     @Id
     @GeneratedValue
-    @Column(name = "PARRENT_ID")
+    @Column(name = "PARENT_ID")
     private Long id;
     private String name;
 
-    @OneToMany
+    @ManyToMany
     @JoinTable(name = "PARENT_CHILD",
             joinColumns = @JoinColumn(name = "PARENT_ID"),
             inverseJoinColumns = @JoinColumn(name = "CHILD_ID")
