@@ -1,4 +1,4 @@
-package com.example.designpattern.behavioral.state.lagacy;
+package com.example.designpattern.behavioral.state.legacy;
 
 public enum HotelState {
     AVAILABLE,
